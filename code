@@ -1,0 +1,47 @@
+import matplotlib.pyplot as plt
+import math
+import numpy as np
+import pandas as pd
+
+t=(111111+1)
+phi = (math.sqrt(5)+ 1)/2
+ex= math.exp(1)
+pi=math.pi
+x=np.arange(1,t,1)
+fi=(phi*x)%1
+em=(ex*x)%1
+ed=(x/ex)%1
+edd=(ex/x)%1
+pm=(x*pi)%1
+pd=(pi/x)%1
+pdd=(x/pi)%1
+lf=np.log(fi)
+lem=np.log(em)
+led=np.log(ed)
+lpm=np.log(pm)
+lpd=np.log(pd)
+laf=abs(lf)
+laem=abs(lem)
+laed=abs(led)
+lapm=abs(lpm)
+lapd=abs(lpd)
+
+
+#################$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+gaia=pd
+
+plt.figure(figsize=(16, 16))  # Tamaño del gráfico
+plt.polar(x, gaia, 'ro', markersize=1, alpha=1, markeredgecolor='none')  # Plot de los datos en coordenadas polares con línea roja y grosor de línea reducido
+plt.ylim(.4, .51)
+#plt.ylim(np.min(gaia), np.max(gaia)) 
+plt.title('')
+plt.xlabel('')  # Remover etiqueta del eje x
+plt.ylabel('')  # Remover etiqueta del eje y
+plt.xticks([])  # Remover marcas en el eje x
+plt.yticks([])  # Remover marcas en el eje y
+plt.box(False)  # Remover el borde del gráfico  # Título del gráfico
+#plt.gca().set_facecolor('black')
+plt.show()
+# Guardar el gráfico como imagen de alta calidad
+plt.savefig('p_pd_432.tiff', dpi=432)
