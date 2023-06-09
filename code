@@ -3,7 +3,7 @@ import math
 import numpy as np
 import pandas as pd
 
-t=(111111+1)
+t=(1111+1)
 phi = (math.sqrt(5)+ 1)/2
 ex= math.exp(1)
 pi=math.pi
